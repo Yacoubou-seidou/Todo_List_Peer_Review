@@ -16,21 +16,21 @@ describe('Add and Remove', () => {
     expect(removetask).toBe(1);
   });
 
-  test('eddit description', () => {
+  test('Edit description', () => {
     const index = 1;
     const description = 'I eddited';
     const edditedTask = editTask(index, description);
     expect(edditedTask).toMatch(/I eddited/);
   });
 
-  test('check status', () => {
+  test('Check status', () => {
     const index = 1;
     const checked = false;
     const newStatus = status(index, checked);
     expect(newStatus).toBeFalsy();
   });
 
-  test('delete all completed tasks', () => {
+  test('Delete all completed tasks', () => {
     const checked = true;
     const clearAllChecked = deleteAllCompleted(checked);
     expect(clearAllChecked).toBe(1);
