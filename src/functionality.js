@@ -28,6 +28,11 @@ const deleteAllCompleted = (array) => {
   }
   localStorage.setItem('todoArray', JSON.stringify(newArray));
 };
+const status = (array, index, value) => {
+  array[index].completed = value;
+  localStorage.setItem('todoArray', JSON.stringify(array));
+};
+
 export {
-  addNewTask, deleteTask, editTask, deleteAllCompleted,
+  addNewTask, deleteTask, editTask, deleteAllCompleted, status,
 };
