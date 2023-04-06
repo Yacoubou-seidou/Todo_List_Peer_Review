@@ -8,7 +8,7 @@ describe('Add and Remove', () => {
     expect(addtask).toBe(1);
   });
 
-  test('Remove task', () => {
+  test('should remove one task from the array.', () => {
     const index = 1;
     const removetask = deleteTask(index);
     expect(removetask).toBe(1);
